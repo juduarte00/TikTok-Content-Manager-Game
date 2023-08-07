@@ -1,0 +1,180 @@
+/* THIS IS FOR videoViewer.HTML */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* put the colors in CSS variables */
+  --ttmagenta: rgba(238, 29, 82, 0.8);
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%
+}  
+
+
+header.redirect {
+    justify-content: center;
+    margin: 30px;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: "Boogaloo";
+}
+
+h2 {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+button {
+    border-radius: 10px;
+    width: 130px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    background-color: var(--ttmagenta);
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    margin: 10px;
+    margin-top: 50px
+}
+
+button:hover {
+    background-color: var(--cyan);
+}
+
+button#reload {
+  background-color: white;
+  color: var(--ttmagenta);
+  height:90px;
+  margin-bottom:0px;
+  margin-top:25px;
+  transform: rotateY(180deg);
+}
+
+div#reload-continue-footer{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button#continue{
+/*   margin-top: 120px; */
+  margin-right: 100px;
+/*   margin-bottom: 60px; */
+/*   width: 150px; */
+}
+div.footer-right {
+  width: 27%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+
+div.footer-left {
+  width: 26%;
+}
+
+div.footer-center {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* svg.fa-redo-alt {
+  height: 100px;
+  width: 200px;
+} */
+/* fas, */
+/* fa-redo-alt {
+font-size: 100px;
+} */
+
+div.video {
+  width: 325px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--ttmagenta);
+}
+
+blockquote {
+  border-style: solid;
+  border-color:  var(--ttmagenta);
+  border-width: 2px;
+  border-radius: 10px;
+  background-color:var(--ttmagenta);
+}
+
+iframe {
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
+@media (max-width: 900px) {
+  div#reload-continue-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.footer-right {
+    justify-content: center;
+  }
+
+  button#continue{
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  div.footer-right {
+    width: 40%;
+  }
+  button#continue{
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+/*    <i class="fas fa-redo-alt fa-5x"></i> */
+  h2 {
+    font-size: 18px;
+  }
+    
+}

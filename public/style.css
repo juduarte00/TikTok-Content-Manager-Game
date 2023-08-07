@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --magenta : rgba(238, 29, 82, 0.9);
+  --cyan : rgb(105, 201, 208);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%
+}  
+
+div.headerRight {
+  width: 18%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+div.headerLeft {
+  width: 18%;
+}
+
+div.headerCenter {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* div#headerMessage {
+  display:flex;
+  margin-top:-75px;
+  margin-bottom:-130px;
+} */
+
+header.redirect {
+    justify-content: center;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: "Boogaloo";
+}
+
+/* Slightly altered default h2 tag. */
+h2 {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
+
+span {
+    color: var(--magenta);
+}
+
+button {
+    border-radius: 10px;
+    width: 130px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    background-color: var(--magenta);
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    margin: 10px;
+}
+
+#myvideos {
+  margin-right: 80px;
+}
+
+#addnew {
+  margin-right: 80px;
+}
+
+button:hover {
+    background-color: var(--cyan);
+}
+
+button.xbutton {
+    height: 70px;
+    font-size: 64px;
+    font-family: "Boogaloo";
+    color: var(--magenta);
+    background-color: transparent;
+  
+}
+
+input {
+    font-weight: 400;
+    width: 70%;
+    height: 40px;
+    margin: 0 auto;
+    padding: 3px 15px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 12px;
+    border: 1px solid transparent; /* Adding transparent border to avoid weird movement whenever border is added. */
+}
+
+button#playgame {
+  height:50px;
+}
+
+input.myVideos {
+  border: 3px solid gray;
+  height: 55px;
+  width: 90%;
+/*   adding the dotted border like this doesn't look quite right
+    Change border px to change how it looks
+  https://www.w3schools.com/css/css_border.asp*/
+  border-style: dashed;
+}
+
+.myvideo {
+    font-weight: 400;
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 3px dashed lightgray;
+
+    display: flex; 
+    align-items: center;
+}
+
+input[type=text]:focus {
+    border: 1px solid turquoise;
+}
+
+label {
+    width: 75%;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.submit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.formfields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.uploadfields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    width: 80%;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+#uploads {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 390px;
+    width: 390px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(-70deg, var(--cyan), 60%, var(--magenta));
+    color: whitesmoke;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .uploadfields  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #uploads {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    width: 90%
+  }
+
+  button.xbutton {
+    font-size: 60px;
+  }
+
+  .myvideo {
+      height: 30px; 
+  }
+  
+  button {
+    width: 200px;
+  }
+  button#playgame {
+  height:50px;
+}
+
+  div.headerRight {
+    width: 30%;
+  }
+  
+  div.headerLeft {
+    width: 30%;
+  }
+  
+  h2 {
+    margin-bottom:10px;
+  }
+  
+/*   div#headerMessage {
+    margin-top:50px;
+    margin-bottom:20px;
+ } */
+
+}
+
+
+@media screen and (max-width:700px) {
+/* THIS IS FOR MYVIDEOS.HTML */
+  .uploadfields  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #uploads {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  button.xbutton {
+    font-size: 44px;
+    width: 40%;
+  }
+
+  .field {
+    height: 50px;
+  }
+
+  button {
+    margin: 0px;
+    width: 130px;
+  }
+  
+  .myvideo {
+    height: 10px;
+    font-size: 14px;
+  }
+
+  .column{
+    width: 95%;
+  }
+
+  #addnew {
+    margin: 0px;
+  }
+
+
+
+/*   THIS IS FOR TIKTOKPETS.HTML */
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+  header {
+    justify-content: space-around;
+  }
+
+  div.headerRight {
+  width: 30%;
+  justify-content: center;
+}
+
+div.headerLeft {
+  display: none;
+}
+
+div.headerCenter {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+    width: 320px;
+}
+
+  #myvideos {
+    margin: 0px;
+  }
+}

@@ -1,0 +1,77 @@
+<!doctype HTML> 
+
+<HTML> 
+
+<HEAD>
+  
+    <meta charset="utf-8" /> 
+<!--     <meta charset="utf-8" ="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" 
+        href="https://ecs-162-spring-2022.profamenta.repl.co/reset.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+<!--     <link rel='stylesheet' media='screen and (max-width: 900px)' href='resize.css' />
+    <link rel='stylesheet' media='screen and (max-width: 700px)' href='resize.css' /> -->
+    <script defer src="myVideos.js"></script>
+     <!-- This is for the icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</HEAD>
+
+<body> 
+    <header>
+      <div class="headerLeft"></div>
+      <div class="headerCenter">
+        <h1 class="main-h1">My Videos</h1>
+      </div>
+      <div class="headerRight">
+        <button id="addnew">Add New</button>
+      </div>
+    </header>
+<!--     <div id="headerMessage">
+      <h2>Please upload 8 videos to continue:</h2>
+    </div> -->
+    <div id="uploads">
+      <h2>Please upload 8 videos to continue:</h2>
+      <div class="uploadfields">
+          <div class="column">
+              <div class="field">
+                <div class="myvideo" id="vid1"></div>
+                <button class = "xbutton" id="x1" onclick="javascript:eraseText('vid1');">X</button>
+              </div>
+              <div class="field">
+                <div class="myvideo" id="vid2"></div>
+                <button class = "xbutton" id="x2" onclick="javascript:eraseText('vid2');">X</button>
+              </div>
+              <div class="field">
+                <div class="myvideo" id="vid3"></div>
+                <button class = "xbutton" id="x3" onclick="javascript:eraseText('vid3');">X</button>
+              </div>
+              <div class="field">
+                <div class="myvideo" id="vid4"></div>
+                <button class = "xbutton" id="x4" onclick="javascript:eraseText('vid4');">X</button>
+              </div>
+          </div>
+          <div class="column">
+              <div class="field">
+                <div class="myvideo" id="vid5"></div>
+                <button class = "xbutton" id="x5" onclick="javascript:eraseText('vid5');">X</button>
+              </div>
+              <div class="field">
+                <div class="myvideo" id="vid6"></div>
+                <button class = "xbutton" id="x6" onclick="javascript:eraseText('vid6');">X</button>
+              </div>
+              <div class="field">
+                <div class="myvideo" id="vid7"></div>
+                <button class = "xbutton" id="x7" onclick="javascript:eraseText('vid7');">X</button>
+              </div>
+              <div class="field">
+                <div class="myvideo" id="vid8"> </div>
+                <button class = "xbutton" id="x8" onclick="javascript:eraseText('vid8');">X</button>
+              </div>
+          </div>
+      </div>
+    </div>
+  <button id="playgame">Play Game</button>
+</body>
+
+</html> 
